@@ -1,0 +1,125 @@
+/* General Base Setup */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f6f7;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    background-color: #1b4f72;
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+#course-title {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* Flexbox Menu Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    background-color: #2c3e50;
+    padding: 0.75rem;
+}
+
+nav a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.25rem 0.5rem;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+/* Menu Hover Effect */
+nav a:hover {
+    color: #f1c40f;
+    border-bottom: 2px solid #f1c40f;
+}
+
+/* Main Structure Wrapper */
+main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+main h1 {
+    text-align: center;
+    color: #2c3e50;
+}
+
+/* CSS Grid Columns for the Cards */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Card Visual Design Rules */
+.card {
+    background-color: white;
+    border: 1px solid #d5dbdb;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    overflow: hidden;
+}
+
+.card h2 {
+    background-color: #1f618d;
+    color: white;
+    margin: 0;
+    padding: 1rem;
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+.card-content {
+    display: flex;
+    padding: 1rem;
+    gap: 1rem;
+    align-items: center;
+}
+
+.card ul {
+    padding: 1.5rem;
+    list-style-type: square;
+}
+
+.card li {
+    margin-bottom: 0.75rem;
+}
+
+.card a {
+    color: #2980b9;
+    text-decoration: none;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Section */
+footer {
+    background-color: #1b4f72;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+}
+
+#lastModified {
+    color: #f1c40f;
+    font-weight: bold;
+    margin-top: 0.5rem;
+}
