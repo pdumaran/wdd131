@@ -1,0 +1,12 @@
+/* Tablet and Desktop Styles */
+@media screen and (min-width: 500px) {
+    header {
+        background-color: #000000;
+        color: #ffffff;
+    }
+
+    /* Switch from 1 column to 2 columns */
+    main {
+        grid-template-columns: 1fr 1fr;
+    }
+}
