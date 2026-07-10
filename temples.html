@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Album - W02 Picture Album</title>
+    <meta name="description"
+        content="A responsive temple picture album featuring layout designs engineered with CSS Flexbox, Grid, and structural DOM manipulation elements.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/temples.css">
+    <link rel="stylesheet" href="styles/temples-large.css" media="(min-width: 740px)">
+
+    <script src="scripts/temples.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Temple Album</h1>
+        <button type="button" id="menu" aria-label="Toggle Menu"></button>
+        <nav>
+            <ul class="navigation">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Old</a></li>
+                <li><a href="#">New</a></li>
+                <li><a href="#">Large</a></li>
+                <li><a href="#">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Explore Hand-Selected Galleries</h2>
+        <div class="gallery-grid">
+            <figure>
+                <img src="https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/barranquilla-colombia/1280x800/3-Barranquilla-Columblia-Temple-2135198.jpg"
+                    alt="Barranquilla Colombia Temple showing classic white architecture against a bright blue sky"
+                    loading="lazy" width="400" height="250">
+                <figcaption>Barranquilla Colombia Temple</figcaption>
+            </figure>
+
+            <figure>
+                <img src="https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/barranquilla-colombia/1280x800/3-Barranquilla-Columblia-Temple-2135198.jpg"
+                    alt="Temple Album Placeholder Image" loading="lazy" width="400" height="250">
+                <figcaption>Salt Lake Temple</figcaption>
+            </figure>
+
+            <figure>
+                <img src="https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/barranquilla-colombia/1280x800/3-Barranquilla-Columblia-Temple-2135198.jpg"
+                    alt="Temple Album Placeholder Image" loading="lazy" width="400" height="250">
+                <figcaption>Manti Utah Temple</figcaption>
+            </figure>
+
+            <figure>
+                <img src="https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/barranquilla-colombia/1280x800/3-Barranquilla-Columblia-Temple-2135198.jpg"
+                    alt="Temple Album Placeholder Image" loading="lazy" width="400" height="250">
+                <figcaption>Rome Italy Temple</figcaption>
+            </figure>
+
+            <figure>
+                <img src="https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/barranquilla-colombia/1280x800/3-Barranquilla-Columblia-Temple-2135198.jpg"
+                    alt="Temple Album Placeholder Image" loading="lazy" width="400" height="250">
+                <figcaption>Paris France Temple</figcaption>
+            </figure>
+
+            <figure>
+                <img src="https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/barranquilla-colombia/1280x800/3-Barranquilla-Columblia-Temple-2135198.jpg"
+                    alt="Temple Album Placeholder Image" loading="lazy" width="400" height="250">
+                <figcaption>Tokyo Japan Temple</figcaption>
+            </figure>
+
+            <figure>
+                <img src="https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/barranquilla-colombia/1280x800/3-Barranquilla-Columblia-Temple-2135198.jpg"
+                    alt="Temple Album Placeholder Image" loading="lazy" width="400" height="250">
+                <figcaption>Frankfurt Germany Temple</figcaption>
+            </figure>
+
+            <figure>
+                <img src="https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/barranquilla-colombia/1280x800/3-Barranquilla-Columblia-Temple-2135198.jpg"
+                    alt="Temple Album Placeholder Image" loading="lazy" width="400" height="250">
+                <figcaption>Manila Philippines Temple</figcaption>
+            </figure>
+
+            <figure>
+                <img src="https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/barranquilla-colombia/1280x800/3-Barranquilla-Columblia-Temple-2135198.jpg"
+                    alt="Temple Album Placeholder Image" loading="lazy" width="400" height="250">
+                <figcaption>Sao Paulo Brazil Temple</figcaption>
+            </figure>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Pierre Phil D. Bangay | Western Visayas, Philippines</p>
+        <p id="lastModified" class="highlight"></p>
+    </footer>
+</body>
+
+</html>
