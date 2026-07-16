@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W03: Responsive Images Activity</title>
+    <meta name="description"
+        content="Demonstrating responsive image layout principles and art direction using the HTML picture element.">
+
+    <link rel="stylesheet" href="styles/responsive-images.css">
+</head>
+
+<body>
+    <main>
+        <h1>Responsive Hero Image Demo</h1>
+
+        <div class="hero">
+            <picture>
+                <source srcset="images/hero-large.webp" media="(min-width: 1000px)">
+
+                <source srcset="images/hero-medium.webp" media="(min-width: 500px)">
+
+                <img src="images/hero-small.webp" alt="Beautiful scenic view of the temple grounds" width="500"
+                    height="250" loading="lazy">
+            </picture>
+        </div>
+
+        <article class="content">
+            <h2>The Importance of Responsive Assets</h2>
+            <p>By serving smaller images to mobile devices and larger images to desktop monitors, we prevent wasted
+                bandwidth and speed up page load times. This is especially helpful for users on slower mobile networks.
+            </p>
+        </article>
+    </main>
+</body>
+
+</html>
