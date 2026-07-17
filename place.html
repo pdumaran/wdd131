@@ -4,10 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Greece - Informational responsive overview highlighting geographic data and weather metrics</title>
+    <title>W03 Assignment: Country Page - Greece</title>
     <meta name="description"
-        content="A semantic informational page exploring fundamental metrics, location statistics, and current weather data for Greece.">
-
+        content="An informational responsive web layout highlighting geographic data and weather metrics for Greece.">
     <link rel="stylesheet" href="styles/place.css">
     <script src="scripts/place.js" defer></script>
 </head>
@@ -18,9 +17,10 @@
     </header>
 
     <main>
+        <!-- Responsive Hero Setup -->
         <div class="hero-container">
             <picture>
-                <!-- Desktop image swap triggered at 800px wide viewports or wider -->
+                <!-- Desktop image swap triggered at 800px or wider -->
                 <source srcset="images/hero-large.webp" media="(min-width: 800px)">
                 <img src="images/hero-small.webp"
                     alt="Scenic view of Santorini white houses and blue domes over the Aegean Sea" width="500"
@@ -28,7 +28,7 @@
             </picture>
         </div>
 
-        <!-- Section for Data Overview with accurate labels and values -->
+        <!-- Data Overview -->
         <section class="card-box data-card">
             <h2>Data</h2>
             <ul class="data-list">
@@ -43,14 +43,14 @@
             </ul>
         </section>
 
-        <!-- Section for Weather Information with data hooks for JavaScript -->
+        <!-- Weather Information -->
         <section class="card-box weather-card">
             <h2>Weather</h2>
 
             <!-- Mobile SVG Viewport Block -->
             <div class="weather-icon-wrapper">
-                <!-- Defined specific dimensions for SVG -->
-                <img src="images/weather-icon.svg" alt="Weather status outline icon representing current conditions"
+                <!-- Defined specific dimensions -->
+                <img src="images/weather-icon.svg" alt="Windswept weather condition icon outline"
                     class="mobile-weather-icon" width="64" height="64">
             </div>
 
@@ -58,7 +58,7 @@
                 <li><span class="label">Temperature:</span> <span class="value">8 °C</span></li>
                 <li><span class="label">Conditions:</span> <span class="value">Breezy</span></li>
                 <li><span class="label">Wind:</span> <span class="value">15 km/h</span></li>
-                <li><span class="label">Wind Chill:</span> <span class="value" id="windchill-value"></span></li>
+                <li><span class="label">Wind Chill:</span> <span class="value" id="windchill-value">5.4 °C</span></li>
             </ul>
         </section>
     </main>
