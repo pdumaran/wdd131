@@ -1,9 +1,10 @@
+/* ==========================================
+   1. Global Variables & Color Palette
+   ========================================== */
 :root {
-    --primary-color: #2f7525;
-    /* Olive/Forest Green */
+    --primary-color: #2f7525;       /* Olive/Forest Green */
     --secondary-color: #3d5a45;
-    --background-light: #faf8f5;
-    /* Warm cream sand */
+    --background-light: #faf8f5;    /* Warm cream sand */
     --surface-white: #ffffff;
     --text-dark: #2b2623;
     --text-light: #ffffff;
@@ -12,7 +13,7 @@
 }
 
 /* ==========================================
-   Base Elements 
+   2. Reset & Document Base Styles
    ========================================== */
 * {
     box-sizing: border-box;
@@ -27,11 +28,21 @@ body {
     line-height: 1.5;
 }
 
+/* ==========================================
+   3. Structural Layout (Mobile First)
+   ========================================== */
 header {
     background-color: var(--primary-color);
     color: var(--text-light);
     text-align: center;
     padding: 1.5rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem;
 }
 
 footer {
@@ -44,25 +55,17 @@ footer {
 }
 
 .last-modified {
-    color: #fff1ec;
-    /* Warm, pale cream white */
+    color: #fff1ec; /* Light cream white */
     margin-top: 0.35rem;
 }
 
 /* ==========================================
-   Mobile Default Layout 
+   4. Component & Card Styles
    ========================================== */
-main {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    padding: 1rem;
-}
-
 .hero-container img {
+    display: block;
     width: 100%;
     height: auto;
-    display: block;
     border-radius: var(--border-radius);
     object-fit: cover;
 }
@@ -88,6 +91,13 @@ main {
     margin-bottom: 1rem;
 }
 
+/* Hide desktop icon on mobile views */
+.weather-card h2::after {
+    content: "";
+    display: none;
+}
+
+/* Data List Layout */
 .data-list {
     list-style: none;
 }
@@ -103,14 +113,8 @@ main {
     font-weight: 700;
 }
 
-/* Hide desktop specific pseudo items in mobile viewports */
-.weather-card h2::after {
-    content: "";
-    display: none;
-}
-
 /* ==========================================
-   4. Desktop Layout 
+   5. Desktop Layout Override (Wider Screens)
    ========================================== */
 @media (min-width: 800px) {
     main {
@@ -119,31 +123,28 @@ main {
         padding: 0;
         width: 100%;
         margin: 0;
-        height: 100vh;
-        /* Fills screen height vertically */
+        height: 100vh; /* Fills screen height vertically */
     }
 
     .hero-container {
         width: 100%;
         height: 100%;
-        /* Make the hero container match main height */
     }
 
     .hero-container img {
         width: 100%;
         height: 100%;
-        /* Spans full height of parent main container */
         border-radius: 0;
         object-fit: cover;
-        /* Prevents distortion when scaling */
         display: block;
     }
 
+    /* Absolute placement over background layout image */
     .card-box {
         position: absolute;
+        width: 320px;
         background-color: rgba(255, 255, 255, 0.85);
         backdrop-filter: blur(4px);
-        width: 320px;
         box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
     }
 
@@ -165,7 +166,7 @@ main {
         border-bottom: none;
     }
 
-    /* Pseudo-element addition for the wider view header */
+    /* Desktop View Weather Title Extensions */
     .weather-card h2 {
         display: flex;
         align-items: center;
@@ -179,7 +180,7 @@ main {
         margin-left: 0.5rem;
     }
 
-    /* Hide standard inline mobile SVG graphics on desktop viewports */
+    /* Hide standard inline mobile SVG graphics on desktop */
     .weather-icon-wrapper {
         display: none;
     }
