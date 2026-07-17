@@ -4,26 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>W03 Assignment: Country Page - Greece</title>
+    <title>Greece - Informational responsive overview highlighting geographic data and weather metrics</title>
     <meta name="description"
-        content="An informational responsive web layout highlighting geographic data and weather metrics for Greece.">
-    <link rel="stylesheet" href="styles/place.css">
+        content="A semantic informational page exploring fundamental metrics, location statistics, and current weather data for Greece.">
 
-    <!-- Link External Scripts -->
+    <link rel="stylesheet" href="styles/place.css">
     <script src="scripts/place.js" defer></script>
 </head>
 
 <body>
     <header>
-        <!-- Proper heading hierarchy -->
         <h1>Greece</h1>
     </header>
 
     <main>
-        <!-- Responsive Hero Setup -->
         <div class="hero-container">
             <picture>
-                <!-- Desktop image swap triggered at 800px or wider -->
+                <!-- Desktop image swap triggered at 800px wide viewports or wider -->
                 <source srcset="images/hero-large.webp" media="(min-width: 800px)">
                 <img src="images/hero-small.webp"
                     alt="Scenic view of Santorini white houses and blue domes over the Aegean Sea" width="500"
@@ -31,7 +28,7 @@
             </picture>
         </div>
 
-        <!-- Data Overview -->
+        <!-- Section for Data Overview with accurate labels and values -->
         <section class="card-box data-card">
             <h2>Data</h2>
             <ul class="data-list">
@@ -46,14 +43,14 @@
             </ul>
         </section>
 
-        <!-- Weather Information -->
+        <!-- Section for Weather Information with data hooks for JavaScript -->
         <section class="card-box weather-card">
             <h2>Weather</h2>
 
             <!-- Mobile SVG Viewport Block -->
             <div class="weather-icon-wrapper">
-                <!-- Defined specific dimensions -->
-                <img src="images/weather-icon.svg" alt="Windswept weather condition outline icon"
+                <!-- Defined specific dimensions for SVG -->
+                <img src="images/weather-icon.svg" alt="Weather status outline icon representing current conditions"
                     class="mobile-weather-icon" width="64" height="64">
             </div>
 
