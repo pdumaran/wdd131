@@ -1,8 +1,9 @@
 :root {
     --primary-color: #2f7525;
-    /* Greek palette update: Olive/Forest Green */
+    /* Olive/Forest Green */
     --secondary-color: #3d5a45;
     --background-light: #faf8f5;
+    /* Warm cream sand */
     --surface-white: #ffffff;
     --text-dark: #2b2623;
     --text-light: #ffffff;
@@ -10,6 +11,9 @@
     --border-radius: 6px;
 }
 
+/* ==========================================
+   Base Elements and Reset rules
+   ========================================== */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -40,10 +44,14 @@ footer {
 }
 
 .last-modified {
-    color: #ffd8cc;
+    color: #fff1ec;
+    /* Warm, pale cream white */
     margin-top: 0.35rem;
 }
 
+/* ==========================================
+   Mobile Default Layout
+   ========================================== */
 main {
     display: flex;
     flex-direction: column;
@@ -54,6 +62,7 @@ main {
 .hero-container img {
     width: 100%;
     height: auto;
+    /* Standard responsive mobile rule */
     display: block;
     border-radius: var(--border-radius);
     object-fit: cover;
@@ -95,11 +104,15 @@ main {
     font-weight: 700;
 }
 
+/* Hide desktop specific pseudo items in mobile viewports */
 .weather-card h2::after {
     content: "";
     display: none;
 }
 
+/* ==========================================
+   Desktop Layout
+   ========================================== */
 @media (min-width: 800px) {
     main {
         position: relative;
@@ -108,21 +121,27 @@ main {
         width: 100%;
         margin: 0;
         height: 100vh;
+        /* Fills screen height vertically */
     }
 
     .hero-container {
         width: 100%;
         height: 100%;
+        /* Make the hero container match main height */
     }
 
     .hero-container img {
         width: 100%;
         height: 100%;
+        /* Spans full height of parent main container */
         border-radius: 0;
         object-fit: cover;
+        /* Prevents distortion when scaling */
         display: block;
+        /* CLS Optimization: Sits perfectly flush with bottom edge */
     }
 
+    /* Position cards directly over the background image layout matching page.jpg */
     .card-box {
         position: absolute;
         background-color: rgba(255, 255, 255, 0.85);
@@ -149,6 +168,7 @@ main {
         border-bottom: none;
     }
 
+    /* Pseudo-element addition for the wider view header */
     .weather-card h2 {
         display: flex;
         align-items: center;
@@ -162,6 +182,7 @@ main {
         margin-left: 0.5rem;
     }
 
+    /* Hide standard inline mobile SVG graphics on desktop viewports */
     .weather-icon-wrapper {
         display: none;
     }
