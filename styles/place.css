@@ -1,9 +1,7 @@
 :root {
     --primary-color: #2f7525;
-    /* Olive/Forest Green */
     --secondary-color: #3d5a45;
     --background-light: #faf8f5;
-    /* Warm cream sand */
     --surface-white: #ffffff;
     --text-dark: #2b2623;
     --text-light: #ffffff;
@@ -12,7 +10,7 @@
 }
 
 /* ==========================================
-   Base Elements and Reset rules
+   Base Elements and Reset rules 
    ========================================== */
 * {
     box-sizing: border-box;
@@ -50,7 +48,7 @@ footer {
 }
 
 /* ==========================================
-   Mobile Default Layout
+   Mobile Default Layout 
    ========================================== */
 main {
     display: flex;
@@ -62,7 +60,6 @@ main {
 .hero-container img {
     width: 100%;
     height: auto;
-    /* Standard responsive mobile rule */
     display: block;
     border-radius: var(--border-radius);
     object-fit: cover;
@@ -121,27 +118,25 @@ main {
         width: 100%;
         margin: 0;
         height: 100vh;
-        /* Fills screen height vertically */
+        /* Spans full vertically visible viewport */
     }
 
     .hero-container {
         width: 100%;
         height: 100%;
-        /* Make the hero container match main height */
     }
 
     .hero-container img {
         width: 100%;
         height: 100%;
-        /* Spans full height of parent main container */
+        /* Spans full parent container height */
         border-radius: 0;
         object-fit: cover;
-        /* Prevents distortion when scaling */
+        /* Prevents stretching/distortion on scaling */
         display: block;
-        /* CLS Optimization: Sits perfectly flush with bottom edge */
     }
 
-    /* Position cards directly over the background image layout matching page.jpg */
+    /* Place components over the background image  */
     .card-box {
         position: absolute;
         background-color: rgba(255, 255, 255, 0.85);
@@ -168,7 +163,7 @@ main {
         border-bottom: none;
     }
 
-    /* Pseudo-element addition for the wider view header */
+    /* Display pseudo-emoticon in wider view only  */
     .weather-card h2 {
         display: flex;
         align-items: center;
