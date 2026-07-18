@@ -2,9 +2,9 @@
    1. Global Variables & Color Palette
    ========================================== */
 :root {
-    --primary-color: #2f7525;       /* Olive/Forest Green */
+    --primary-color: #2f7525;
     --secondary-color: #3d5a45;
-    --background-light: #faf8f5;    /* Warm cream sand */
+    --background-light: #faf8f5;
     --surface-white: #ffffff;
     --text-dark: #2b2623;
     --text-light: #ffffff;
@@ -29,7 +29,7 @@ body {
 }
 
 /* ==========================================
-   3. Structural Layout (Mobile First)
+   3. Mobile First
    ========================================== */
 header {
     background-color: var(--primary-color);
@@ -55,18 +55,26 @@ footer {
 }
 
 .last-modified {
-    color: #fff1ec; /* Light cream white */
+    color: #fff1ec;
     margin-top: 0.35rem;
 }
 
 /* ==========================================
    4. Component & Card Styles
    ========================================== */
+.hero-container {
+    width: 100%;
+    position: relative;
+    aspect-ratio: 500 / 300;
+    background-color: #e2dfda;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
 .hero-container img {
     display: block;
     width: 100%;
-    height: auto;
-    border-radius: var(--border-radius);
+    height: 100%;
     object-fit: cover;
 }
 
@@ -91,13 +99,11 @@ footer {
     margin-bottom: 1rem;
 }
 
-/* Hide desktop icon on mobile views */
 .weather-card h2::after {
     content: "";
     display: none;
 }
 
-/* Data List Layout */
 .data-list {
     list-style: none;
 }
@@ -114,7 +120,7 @@ footer {
 }
 
 /* ==========================================
-   5. Desktop Layout Override (Wider Screens)
+   5. Wider Screens
    ========================================== */
 @media (min-width: 800px) {
     main {
@@ -122,30 +128,24 @@ footer {
         display: block;
         padding: 0;
         width: 100%;
-        margin: 0;
-        height: 100vh; /* Fills screen height vertically */
+        margin: 0 auto;
+        max-width: 1200px;
     }
 
     .hero-container {
         width: 100%;
-        height: 100%;
-    }
-
-    .hero-container img {
-        width: 100%;
-        height: 100%;
+        height: 550px;
+        aspect-ratio: auto;
         border-radius: 0;
-        object-fit: cover;
-        display: block;
     }
 
-    /* Absolute placement over background layout image */
     .card-box {
         position: absolute;
         width: 320px;
         background-color: rgba(255, 255, 255, 0.85);
         backdrop-filter: blur(4px);
         box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        z-index: 10;
     }
 
     .data-card {
@@ -166,7 +166,6 @@ footer {
         border-bottom: none;
     }
 
-    /* Desktop View Weather Title Extensions */
     .weather-card h2 {
         display: flex;
         align-items: center;
@@ -180,7 +179,6 @@ footer {
         margin-left: 0.5rem;
     }
 
-    /* Hide standard inline mobile SVG graphics on desktop */
     .weather-icon-wrapper {
         display: none;
     }
