@@ -7,10 +7,6 @@
     <title>W03 Assignment: Country Page - Greece</title>
     <meta name="description"
         content="An informational responsive web layout highlighting geographic data and weather metrics for Greece.">
-
-    <link rel="preload" href="styles/place.css" as="style">
-    <link rel="preload" href="images/hero-small.webp" as="image" type="image/webp" media="(max-width: 799px)">
-
     <link rel="stylesheet" href="styles/place.css">
     <script src="scripts/place.js" defer></script>
 </head>
@@ -49,9 +45,12 @@
         <!-- Weather Information -->
         <section class="card-box weather-card">
             <h2>Weather</h2>
+
+            <!-- Mobile SVG Viewport Block -->
             <div class="weather-icon-wrapper">
+                <!-- Defined specific dimensions -->
                 <img src="images/weather-icon.svg" alt="Windswept weather condition outline icon"
-                    class="mobile-weather-icon" width="64" height="64" loading="lazy">
+                    class="mobile-weather-icon" width="64" height="64">
             </div>
 
             <ul class="data-list">

@@ -1,31 +1,26 @@
-// Single-line formula to calculate wind chill index
-const calculateWindChill = (temp, wind) =>
-    (13.12 + (0.6215 * temp) - (11.37 * Math.pow(wind, 0.16)) + (0.3965 * temp * Math.pow(wind, 0.16))).toFixed(1);
-
 document.addEventListener("DOMContentLoaded", () => {
+    // 1. Display current year and last modified date
+    document.getElementById("current-year").textContent = new Date().getFullYear();
+    document.getElementById("last-modified-date").textContent = document.lastModified;
+
+    // 2. Define static context data defining the weather conditions
     const temperatureCelsius = 8;
     const windSpeedKmH = 15;
 
-    // DOM Elements Selection
-    const currentYearContainer = document.getElementById("current-year");
-    const lastModifiedContainer = document.getElementById("last-modified-date");
+    // Target tracking viewport text containers
     const windchillContainer = document.getElementById("windchill-value");
 
-    requestAnimationFrame(() => {
-        if (currentYearContainer) {
-            currentYearContainer.textContent = new Date().getFullYear();
-        }
-        if (lastModifiedContainer) {
-            lastModifiedContainer.textContent = document.lastModified;
-        }
+    // 3. Single-line calculation formulation requirement [cite: Metric Formula Parameters]
+    const calculateWindChill = (temp, wind) =>
+        (13.12 + (0.6215 * temp) - (11.37 * Math.pow(wind, 0.16)) + (0.3965 * temp * Math.pow(wind, 0.16))).toFixed(1);
 
-        if (windchillContainer) {
-            if (temperatureCelsius <= 10 && windSpeedKmH > 4.8) {
-                const computedIndex = calculateWindChill(temperatureCelsius, windSpeedKmH);
-                windchillContainer.textContent = `${computedIndex} °C`;
-            } else {
-                windchillContainer.textContent = "N/A";
-            }
-        }
-    });
+    // 4. Validate operating constraints limits before invoking operations
+    if (temperatureCelsius <= 10 && windSpeedKmH > 4.8) {
+        // Invoke function and display result
+        const computedIndex = calculateWindChill(temperatureCelsius, windSpeedKmH);
+        windchillContainer.textContent = `${computedIndex} °C`;
+    } else {
+        // Display Not Applicable
+        windchillContainer.textContent = "N/A";
+    }
 });

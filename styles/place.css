@@ -1,5 +1,5 @@
 /* ==========================================
-   1. Global Variables & Color Palette
+   Design Token Variables
    ========================================== */
 :root {
     --primary-color: #2f7525;
@@ -13,7 +13,7 @@
 }
 
 /* ==========================================
-   2. Reset & Document Base Styles
+   Base Elements and Reset rules 
    ========================================== */
 * {
     box-sizing: border-box;
@@ -28,21 +28,11 @@ body {
     line-height: 1.5;
 }
 
-/* ==========================================
-   3. Mobile First
-   ========================================== */
 header {
     background-color: var(--primary-color);
     color: var(--text-light);
     text-align: center;
     padding: 1.5rem;
-}
-
-main {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    padding: 1rem;
 }
 
 footer {
@@ -60,21 +50,20 @@ footer {
 }
 
 /* ==========================================
-   4. Component & Card Styles
+   Mobile Default Layout 
    ========================================== */
-.hero-container {
-    width: 100%;
-    position: relative;
-    aspect-ratio: 500 / 300;
-    background-color: #e2dfda;
-    border-radius: var(--border-radius);
-    overflow: hidden;
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem;
 }
 
 .hero-container img {
-    display: block;
     width: 100%;
-    height: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--border-radius);
     object-fit: cover;
 }
 
@@ -99,11 +88,6 @@ footer {
     margin-bottom: 1rem;
 }
 
-.weather-card h2::after {
-    content: "";
-    display: none;
-}
-
 .data-list {
     list-style: none;
 }
@@ -119,8 +103,14 @@ footer {
     font-weight: 700;
 }
 
+/* Hide desktop specific pseudo items in mobile viewports */
+.weather-card h2::after {
+    content: "";
+    display: none;
+}
+
 /* ==========================================
-   5. Wider Screens
+   Desktop Layout 
    ========================================== */
 @media (min-width: 800px) {
     main {
@@ -128,23 +118,29 @@ footer {
         display: block;
         padding: 0;
         width: 100%;
-        margin: 0 auto;
-        max-width: 1200px;
+        margin: 0;
+        height: 100vh;
     }
 
     .hero-container {
         width: 100%;
-        height: 550px;
-        aspect-ratio: auto;
+        height: 100%;
+    }
+
+    .hero-container img {
+        width: 100%;
+        height: 100%;
         border-radius: 0;
+        object-fit: cover;
+        display: block;
     }
 
     .card-box {
         position: absolute;
+        background-color: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(4px);
         width: 320px;
-        background-color: #ffffff;
         box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-        z-index: 10;
     }
 
     .data-card {
@@ -178,6 +174,7 @@ footer {
         margin-left: 0.5rem;
     }
 
+    /* Hide standard inline mobile SVG graphics on desktop viewports */
     .weather-icon-wrapper {
         display: none;
     }
