@@ -1,0 +1,67 @@
+/* Core Styling Rules */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header,
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+main {
+    flex: 1;
+    /* Ensures footer sits at bottom */
+    padding: 2rem;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Requirement 8 - Single centered column layout */
+img {
+    display: block;
+    /* Required for auto margins to center [Activity Instructions #8] */
+    max-width: 400px;
+    height: auto;
+    /* Maintains portrait aspect ratio */
+    margin: 2rem auto;
+    /* Centers the images and adds vertical spacing */
+
+    /* Requirement 10 - Fade-from-black animation setup */
+    background-color: #000;
+    /* Core of the fade-from-black effect [Activity Instructions #10] */
+    opacity: 0;
+    /* Starts invisible */
+
+    /* Animation definition - run fadeIn for 1 second, smoothly, and keep final state */
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+/* Requirement 10 - Defines the fadeIn keyframes */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        /* Invisible */
+    }
+
+    100% {
+        opacity: 1;
+        /* Fully visible */
+    }
+}
