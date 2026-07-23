@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W04 Activity: JavaScript Objects</title>
+    <style>
+        /* CSS reset and basic styling rules */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 2rem;
+        }
+
+        table {
+            border-collapse: collapse;
+            border: 1px solid #ddd;
+            margin-top: 1rem;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        th,
+        td {
+            padding: 0.75rem;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #000;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        /* CSS rules to improve readability [cite: Zebra striping practie example CSS] */
+        tr:nth-child(odd) {
+            background-color: #bed;
+        }
+
+        tr:hover {
+            background-color: #ace;
+        }
+
+        caption {
+            caption-side: top;
+            font-size: 1.1rem;
+            font-weight: bold;
+            padding: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>JavaScript Objects</h1>
+
+    <!-- HTML structure required for this activity [Activity Instructions HTML] -->
+    <table id="sections">
+        <caption id="courseName"></caption>
+        <thead>
+            <tr>
+                <th>Section</th>
+                <th>Enrollment</th>
+                <th>Instructor</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Sections will be rendered here by JavaScript -->
+        </tbody>
+    </table>
+
+    <script src="scripts/objects.js"></script>
+</body>
+
+</html>
