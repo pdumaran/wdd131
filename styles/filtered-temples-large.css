@@ -1,0 +1,46 @@
+@media (min-width: 740px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+    }
+
+    h1 {
+        margin-bottom: 0;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    nav {
+        width: auto;
+    }
+
+    .navigation {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    .navigation li {
+        display: block;
+    }
+
+    nav a {
+        padding: 0.75rem 1.2rem;
+        border-bottom: none;
+        font-size: 1rem;
+    }
+
+    .active {
+        border-left: none;
+        border-bottom: 3px solid #18bc9c;
+    }
+
+    /* Column layout for larger screens */
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        grid-gap: 30px;
+    }
+}
