@@ -96,6 +96,11 @@ document.addEventListener("DOMContentLoaded", () => {
         filteredTemples.forEach((temple) => {
             const card = document.createElement("figure");
 
+            // Do not lazy-load the first image (above the fold)
+            const loadingAttr = index === 0
+                ? 'loading="eager" fetchpriority="high"'
+                : 'loading="lazy"';
+
             card.innerHTML = `
                 <h3>${temple.templeName}</h3>
                 <p><strong>Location:</strong> ${temple.location}</p>
