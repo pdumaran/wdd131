@@ -1,0 +1,219 @@
+/* CSS Variables for Selected Color Palette */
+:root {
+    --primary-color: #2E5A36;     /* Forest Green */
+    --secondary-color: #8B5A2B;   /* Earth Brown */
+    --background-color: #F7F9F6;  /* Soft Off-White */
+    --text-color: #1E231F;        /* Deep Off-Black */
+    --card-bg: #FFFFFF;
+    --border-color: #D2DCD4;
+    
+    --heading-font: 'Montserrat', sans-serif;
+    --body-font: 'Open Sans', sans-serif;
+}
+
+/* Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--body-font);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    font-family: var(--heading-font);
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+header h2 {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Plan Sections */
+.plan-section {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem 2rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.plan-section h2 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.plan-section p, .plan-section ul {
+    margin-bottom: 1rem;
+}
+
+.plan-section ul {
+    list-style-position: inside;
+    padding-left: 0.5rem;
+}
+
+.plan-section li {
+    margin-bottom: 0.5rem;
+}
+
+/* Color Schema Section */
+.color-palette {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.color-swatch {
+    flex: 1 1 180px;
+    padding: 1.5rem 1rem;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+}
+
+.color-swatch span {
+    font-size: 1.1rem;
+}
+
+.color-swatch small {
+    font-weight: normal;
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+}
+
+.forest-green {
+    background-color: #2E5A36;
+    color: #ffffff;
+}
+
+.earth-brown {
+    background-color: #8B5A2B;
+    color: #ffffff;
+}
+
+.light-bg {
+    background-color: #F7F9F6;
+    color: #1E231F;
+}
+
+.dark-text {
+    background-color: #1E231F;
+    color: #ffffff;
+}
+
+/* Typography Font Samples */
+.font-heading-sample {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+}
+
+.font-body-sample {
+    font-family: var(--body-font);
+    color: var(--text-color);
+}
+
+/* Wireframe Visualizations */
+.wireframe-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+    .wireframe-container {
+        flex-direction: row;
+    }
+}
+
+.wireframe-box {
+    flex: 1;
+    background: #f0f3f0;
+    padding: 1rem;
+    border-radius: 6px;
+    border: 1px dashed var(--secondary-color);
+}
+
+.wireframe-box h3 {
+    font-family: var(--heading-font);
+    margin-bottom: 0.75rem;
+    text-align: center;
+    color: var(--secondary-color);
+}
+
+.wf-mockup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.wf-block {
+    background: #ffffff;
+    border: 1px solid #bbb;
+    padding: 0.75rem;
+    text-align: center;
+    font-size: 0.85rem;
+    font-weight: bold;
+    border-radius: 4px;
+    color: #444;
+}
+
+.wf-grid {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.wf-sidebar {
+    flex: 1;
+}
+
+.wf-content {
+    flex: 3;
+}
+
+.wf-card-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    color: var(--text-color);
+    font-size: 0.9rem;
+}

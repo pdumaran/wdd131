@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trail Explorer - Website Site Plan</title>
+    <meta name="description"
+        content="Website Planning Document for Trail Explorer, a responsive local hiking and biking trail guide created for WDD 131.">
+    <meta name="author" content="Pierre Phil D. Bangay">
+
+    <!-- Preconnect for Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/siteplan.css">
+</head>
+
+<body>
+    <header>
+        <h1>Trail Explorer - Site Plan</h1>
+        <h2>Pierre Phil D. Bangay</h2>
+        <p>WDD 131 - Dynamic Web Fundamentals</p>
+    </header>
+
+    <main>
+        <!-- 1. Site Name -->
+        <section class="plan-section">
+            <h2>1. Site Name</h2>
+            <p><strong>Site Name:</strong> Trail Explorer</p>
+            <p><strong>Reasoning:</strong> "Trail Explorer" is concise, memorable, and directly communicates the core
+                theme of the website-discovering local outdoor hiking and biking trails. It appeals to both local
+                residents and visiting outdoor enthusiasts looking for reliable route information.</p>
+            <p><strong>Optional Domain Availability:</strong> <code>trailexplorerguide.org</code></p>
+        </section>
+
+        <!-- 2. Site Purpose -->
+        <section class="plan-section">
+            <h2>2. Site Purpose</h2>
+            <p>The primary purpose of <strong>Trail Explorer</strong> is to serve as an accessible, central hub for
+                local trail information. It helps outdoor enthusiasts discover regional hiking and biking paths, assess
+                route difficulties, check distance and terrain specs, and save custom trail preferences. Additionally,
+                it offers a contact/feedback form for users to request route recommendations or submit trail condition
+                updates.</p>
+        </section>
+
+        <!-- 3. Scenarios -->
+        <section class="plan-section">
+            <h2>3. Target Audience Scenarios</h2>
+            <ul>
+                <li><strong>Scenario 1:</strong> "Where can I find moderate-level mountain biking trails near me that
+                    have loop options and parking facilities?"</li>
+                <li><strong>Scenario 2:</strong> "How can I filter local hiking trails by distance and save my favorite
+                    paths so I can review them later?"</li>
+                <li><strong>Scenario 3:</strong> "How can I get in touch with local trail guides or report a fallen tree
+                    on a specific trail?"</li>
+            </ul>
+        </section>
+
+        <!-- 4. Color Schema -->
+        <section class="plan-section">
+            <h2>4. Color Schema</h2>
+            <p>The color palette is inspired by natural, outdoor landscapes to reflect the trail theme while maintaining
+                high contrast for accessibility (WCAG AA compliant).</p>
+
+            <div class="color-palette">
+                <div class="color-swatch forest-green">
+                    <span>#2E5A36</span>
+                    <small>Primary Accent (Header, Navigation, Buttons)</small>
+                </div>
+                <div class="color-swatch earth-brown">
+                    <span>#8B5A2B</span>
+                    <small>Secondary Accent (Subheadings, Hover States)</small>
+                </div>
+                <div class="color-swatch light-bg">
+                    <span>#F7F9F6</span>
+                    <small>Background (Page Body, Card Canvas)</small>
+                </div>
+                <div class="color-swatch dark-text">
+                    <span>#1E231F</span>
+                    <small>Text Color (Body Copy, Main Headings)</small>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Typography -->
+        <section class="plan-section">
+            <h2>5. Typography</h2>
+            <p>The site uses two web fonts from Google Fonts to ensure legibility across screen sizes:</p>
+            <ul>
+                <li>
+                    <strong class="font-heading-sample">Montserrat (Bold 700 / Semi-Bold 600)</strong> - Used for main
+                    headings (<code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>), main title
+                    banners, and primary navigation links.
+                </li>
+                <li>
+                    <strong class="font-body-sample">Open Sans (Regular 400 / Semi-Bold 600)</strong> - Used for
+                    paragraph body text, form field labels, list items, and footer metadata.
+                </li>
+            </ul>
+        </section>
+
+        <!-- 6. Wireframes -->
+        <section class="plan-section">
+            <h2>6. Wireframes</h2>
+            <p>Below are structural layouts representing the home page design across mobile and desktop viewpoints.</p>
+
+            <div class="wireframe-container">
+                <!-- Mobile Wireframe Representation -->
+                <div class="wireframe-box">
+                    <h3>Mobile View Layout</h3>
+                    <div class="wf-mockup mobile-wf">
+                        <div class="wf-block wf-header">[Header / Logo / Hamburger Menu]</div>
+                        <div class="wf-block wf-hero">[Hero Banner & Call-To-Action]</div>
+                        <div class="wf-block wf-filter">[Filter Controls / Dropdown]</div>
+                        <div class="wf-block wf-card">[Trail Card 1]</div>
+                        <div class="wf-block wf-card">[Trail Card 2]</div>
+                        <div class="wf-block wf-footer">[Footer / Navigation / Reference Link]</div>
+                    </div>
+                </div>
+
+                <!-- Desktop Wireframe Representation -->
+                <div class="wireframe-box">
+                    <h3>Desktop View Layout</h3>
+                    <div class="wf-mockup desktop-wf">
+                        <div class="wf-block wf-header">[Header Logo | Nav Links: Home, Trails, Contact]</div>
+                        <div class="wf-block wf-hero">[Hero Image & Search Bar Overlay]</div>
+                        <div class="wf-grid">
+                            <div class="wf-block wf-sidebar">[Sidebar Filters]</div>
+                            <div class="wf-block wf-content">
+                                <div class="wf-card-grid">
+                                    <div class="wf-block wf-card">[Trail Card 1]</div>
+                                    <div class="wf-block wf-card">[Trail Card 2]</div>
+                                    <div class="wf-block wf-card">[Trail Card 3]</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wf-block wf-footer">[Footer Links & References Page Link]</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Pierre Phil D. Bangay | Trail Explorer Site Plan</p>
+    </footer>
+
+    <script>
+        document.getElementById("currentyear").textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
