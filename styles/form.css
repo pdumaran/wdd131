@@ -115,7 +115,7 @@ textarea {
 .stars-container {
     display: flex;
     justify-content: flex-start;
-    gap: 1.25rem;
+    gap: 1rem;
     margin-top: 0.25rem;
 }
 
@@ -232,4 +232,43 @@ footer {
 
 footer p {
     margin: 0.25rem 0;
+}
+
+/* ==========================================================================
+   MEDIA QUERIES (Responsive Web Design)
+   ========================================================================== */
+
+/* Mobile view adaptations */
+@media screen and (max-width: 480px) {
+    main {
+        padding: 0 0.5rem;
+    }
+
+    form {
+        padding: 1rem;
+    }
+
+    .stars-container {
+        gap: 0.5rem;
+    }
+
+    .star-option label {
+        font-size: 0.95rem;
+    }
+}
+
+/* Desktop & Larger Screens */
+@media screen and (min-width: 768px) {
+    main {
+        max-width: 650px;
+        margin: 2.5rem auto;
+    }
+
+    form {
+        padding: 2.25rem;
+    }
+
+    .stars-container {
+        gap: 1.75rem;
+    }
 }
