@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
             difficulty: "Hard",
             distance: "14.5 km",
             elevation: "2,435m",
-            image: "images/trail1.webp", // Updated to local file
+            image: "images/trail1.webp",
             description: "A challenging high-altitude hike offering panoramic views across Negros Island."
         },
         {
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
             difficulty: "Easy",
             distance: "4.2 km",
             elevation: "320m",
-            image: "images/trail2.webp", // Updated to local file
+            image: "images/trail2.webp",
             description: "A shaded, gentle walk perfect for beginners and family outings."
         },
         {
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
             difficulty: "Moderate",
             distance: "8.0 km",
             elevation: "650m",
-            image: "images/trail3.webp", // Updated to local file
+            image: "images/trail3.webp",
             description: "Scenic trail featuring river crossings and stunning waterfall views."
         },
         {
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
             difficulty: "Easy",
             distance: "3.0 km",
             elevation: "180m",
-            image: "images/trail4.webp", // Can reuse a local file
+            image: "images/trail4.webp",
             description: "Quick, paved trail with fantastic sunset viewpoints over the valley."
         }
     ];
@@ -60,7 +60,6 @@ document.addEventListener("DOMContentLoaded", () => {
         trailArray.forEach(trail => {
             const isFav = isFavorite(trail.id) ? "❤️ Saved" : "🤍 Save to Favorites";
 
-            // Exclusive use of Template Literals for HTML Output
             const cardHTML = `
                 <article class="trail-card">
                     <img src="${trail.image}" alt="${trail.name}" loading="lazy" width="500" height="180">
@@ -74,7 +73,6 @@ document.addEventListener("DOMContentLoaded", () => {
             container.innerHTML += cardHTML;
         });
 
-        // Add Event Listeners for Favorite Buttons
         const favButtons = container.querySelectorAll(".fav-btn");
         favButtons.forEach(btn => {
             btn.addEventListener("click", (e) => toggleFavorite(e.target.dataset.id));
@@ -88,13 +86,11 @@ document.addEventListener("DOMContentLoaded", () => {
         if (difficulty === "all") {
             renderTrails(trails, trailsGrid);
         } else {
-            // Array Filter Method
             const filtered = trails.filter(trail => trail.difficulty === difficulty);
             renderTrails(filtered, trailsGrid);
         }
     }
 
-    // Filter Buttons Event Delegation
     if (filterButtons) {
         filterButtons.forEach(btn => {
             btn.addEventListener("click", (e) => {
@@ -105,7 +101,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Populate Select Options inside Form
     if (selectElement) {
         trails.forEach(trail => {
             const option = document.createElement("option");
@@ -130,7 +125,6 @@ document.addEventListener("DOMContentLoaded", () => {
     function toggleFavorite(id) {
         let favorites = getFavorites();
 
-        // Conditional Branching
         if (favorites.includes(id)) {
             favorites = favorites.filter(favId => favId !== id);
         } else {
@@ -139,7 +133,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         localStorage.setItem("trailFavorites", JSON.stringify(favorites));
 
-        // Re-render current view to reflect state change
         if (trailsGrid) {
             const activeFilterBtn = document.querySelector(".filter-btn.active-filter");
             const currentFilter = activeFilterBtn ? activeFilterBtn.dataset.difficulty : "all";
@@ -149,7 +142,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // Handle Form Submission Counter in LocalStorage
     if (contactForm) {
         contactForm.addEventListener("submit", () => {
             let submissionCount = Number(localStorage.getItem("formSubmissions")) || 0;
@@ -172,7 +164,6 @@ document.addEventListener("DOMContentLoaded", () => {
         lastModifiedP.textContent = `Last Modification: ${document.lastModified}`;
     }
 
-    // Initial Page Renders
     if (trailsGrid) renderTrails(trails, trailsGrid);
     if (featuredContainer) renderTrails(trails.slice(0, 2), featuredContainer);
 });
