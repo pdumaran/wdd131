@@ -2,15 +2,19 @@
 :root {
     --primary-header: #2b0323;
     /* Dark Plum */
-    --form-bg: #d9d0d8;
-    /* Soft Muted Purple-Gray */
+    --form-bg: #ffffff;
+    /* High-contrast crisp white background for WCAG AA compliance */
     --card-bg: #ffffff;
-    --text-color: #1a1a1a;
-    --border-color: #888888;
+    --text-color: #111111;
+    --border-color: #555555;
+    /* Darker border for higher contrast */
     --focus-ring: #0056b3;
-    --button-bg: #f0f0f0;
-    --button-hover: #e0e0e0;
-    --required-color: #c90000;
+    --button-bg: #2b0323;
+    /* High contrast dark plum button background */
+    --button-text: #ffffff;
+    /* White text on dark button */
+    --button-hover: #4a063d;
+    --required-color: #b30000;
 }
 
 * {
@@ -22,7 +26,7 @@
 body {
     font-family: 'Roboto', Arial, sans-serif;
     color: var(--text-color);
-    background-color: #f4f4f6;
+    background-color: #eef0f3;
     line-height: 1.5;
 }
 
@@ -50,7 +54,7 @@ form {
     background-color: var(--form-bg);
     padding: 1.5rem;
     border-radius: 6px;
-    border: 1px solid #c0b5c0;
+    border: 1px solid #b0b0b0;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
@@ -65,7 +69,7 @@ legend {
     font-weight: 700;
     font-size: 1.05rem;
     margin-bottom: 0.35rem;
-    color: #111;
+    color: #111111;
 }
 
 .required-indicator {
@@ -78,7 +82,7 @@ legend {
     font-weight: 400;
     font-style: italic;
     font-size: 0.95rem;
-    color: #333;
+    color: #222222;
 }
 
 /* Form Inputs */
@@ -93,6 +97,7 @@ textarea {
     border: 1px solid var(--border-color);
     border-radius: 4px;
     background-color: var(--card-bg);
+    color: #111111;
 }
 
 select:focus,
@@ -165,11 +170,11 @@ textarea {
 /* Submit Button */
 .submit-btn {
     background-color: var(--button-bg);
-    color: #000000;
+    color: var(--button-text);
     font-size: 1.2rem;
     font-weight: 700;
     padding: 0.75rem;
-    border: 1px solid #777;
+    border: none;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.2s ease, transform 0.1s ease;
@@ -198,12 +203,13 @@ textarea {
 }
 
 .counter-display {
-    background-color: var(--form-bg);
+    background-color: #f0edf0;
     padding: 1rem;
     border-radius: 4px;
     margin: 1.5rem 0;
     font-size: 1.2rem;
     font-weight: 700;
+    color: #111111;
 }
 
 .back-link {
