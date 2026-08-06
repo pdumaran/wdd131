@@ -1,20 +1,32 @@
 /* Color Palette & CSS Variables */
 :root {
+    /* Brand & Surface Colors */
     --primary-header: #2b0323;
     /* Dark Plum */
     --form-bg: #ffffff;
-    /* High-contrast crisp white background for WCAG AA compliance */
+    /* Form Background */
     --card-bg: #ffffff;
-    --text-color: #111111;
+    /* Card Background */
+    --body-bg: #eef0f3;
+    /* Page Background */
+    --counter-bg: #f0edf0;
+    /* Counter Box Background */
+
+    /* Text & Border Colors */
+    --text-primary: #111111;
+    --text-secondary: #222222;
+    --text-light: #ffffff;
     --border-color: #555555;
-    /* Darker border for higher contrast */
+    --border-light: #b0b0b0;
+
+    /* Interactive & State Colors */
     --focus-ring: #0056b3;
     --button-bg: #2b0323;
-    /* High contrast dark plum button background */
-    --button-text: #ffffff;
-    /* White text on dark button */
     --button-hover: #4a063d;
     --required-color: #b30000;
+
+    /* Overlay / Shadow Colors */
+    --shadow-color: rgba(0, 0, 0, 0.08);
 }
 
 * {
