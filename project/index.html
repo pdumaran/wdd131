@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trail Explorer - Home</title>
+    <meta name="description"
+        content="Discover, plan, and explore top hiking trails across Western Visayas with detailed route info and reviews.">
+    <meta name="author" content="Pierre Phil D. Bangay">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/project.css">
+    <script src="scripts/project.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <span>🌲 Trail Explorer</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="trails.html">Trails</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <img src="images/hero-trail.webp" alt="Panoramic view of mountain hiking trail" width="1200" height="500"
+                class="hero-img">
+            <div class="hero-content">
+                <h1>Find Your Next Mountain Adventure</h1>
+                <p>Explore curated trail guides, save your favorite hikes, and connect with nature safely.</p>
+                <a href="trails.html" class="cta-btn">Browse All Trails</a>
+            </div>
+        </section>
+
+        <section class="features">
+            <h2>Featured Highlights</h2>
+            <div class="grid-container">
+                <div class="card">
+                    <h3>Curated Maps</h3>
+                    <p>Verified trail paths with elevation profiles and difficulty ratings.</p>
+                </div>
+                <div class="card">
+                    <h3>Community Verified</h3>
+                    <p>Updated daily with real weather conditions and hiker feedback.</p>
+                </div>
+                <div class="card">
+                    <h3>Favorites Tracker</h3>
+                    <p>Save trails directly to your device for offline planning.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="quick-filter">
+            <h2>Explore Top Recommendations</h2>
+            <div id="featured-trail-container" class="trail-grid">
+                <!-- Dynamically populated via JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Pierre Phil D. Bangay | Western Visayas, Philippines</p>
+        <p id="lastModified"></p>
+        <p><a href="references.html" class="ref-link">Image & Content References</a></p>
+    </footer>
+</body>
+
+</html>

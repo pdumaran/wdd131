@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trail Explorer - Discover Trails</title>
+    <meta name="description"
+        content="Filter and explore hiking trails by difficulty level and location in Western Visayas.">
+    <meta name="author" content="Pierre Phil D. Bangay">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/project.css">
+    <script src="scripts/project.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <span>🌲 Trail Explorer</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="trails.html" class="active">Trails</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1>Trail Directory</h1>
+            <p>Filter trails by difficulty to match your hiking experience.</p>
+
+            <div class="filter-controls">
+                <button class="filter-btn active-filter" data-difficulty="all">All Trails</button>
+                <button class="filter-btn" data-difficulty="Easy">Easy</button>
+                <button class="filter-btn" data-difficulty="Moderate">Moderate</button>
+                <button class="filter-btn" data-difficulty="Hard">Hard</button>
+            </div>
+        </section>
+
+        <section class="trail-display">
+            <div id="trails-grid" class="trail-grid">
+                <!-- Dynamically rendered trail cards via JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Pierre Phil D. Bangay | Western Visayas, Philippines</p>
+        <p id="lastModified"></p>
+        <p><a href="references.html" class="ref-link">Image & Content References</a></p>
+    </footer>
+</body>
+
+</html>

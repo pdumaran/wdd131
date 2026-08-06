@@ -1,0 +1,343 @@
+/* ==========================================================================
+   CSS VARIABLES & DESIGN TOKENS
+   ========================================================================== */
+:root {
+    --primary: #1b4332;
+    /* Deep Forest Green */
+    --primary-hover: #2d6a4f;
+    --accent: #d8f3dc;
+    --dark-text: #111111;
+    --light-text: #ffffff;
+    --bg-main: #f8f9fa;
+    --card-bg: #ffffff;
+    --border-color: #cccccc;
+    --focus-ring: #0056b3;
+    --shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--dark-text);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ==========================================================================
+   HEADER & NAVIGATION
+   ========================================================================== */
+header {
+    background-color: var(--primary);
+    color: var(--light-text);
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.25rem;
+}
+
+nav a {
+    color: var(--light-text);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+nav a:hover,
+nav a.active {
+    background-color: var(--primary-hover);
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   MAIN CONTENT & LAYOUTS
+   ========================================================================== */
+main {
+    flex: 1;
+    max-width: 1100px;
+    width: 100%;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--primary);
+    color: var(--light-text);
+    padding: 3rem 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.hero-img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+/* Trail Card Image Styling */
+.trail-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    /* Prevents image distortion */
+    border-radius: 4px;
+    margin-bottom: 0.75rem;
+}
+
+.hero h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.cta-btn {
+    display: inline-block;
+    background-color: var(--light-text);
+    color: var(--primary);
+    padding: 0.75rem 1.5rem;
+    font-weight: 700;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.cta-btn:hover {
+    background-color: var(--accent);
+}
+
+/* Cards & Grid Layout */
+.grid-container,
+.trail-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.card,
+.trail-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 1.25rem;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+}
+
+.trail-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 0.75rem;
+}
+
+.trail-card h3 {
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.difficulty-tag {
+    display: inline-block;
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    width: fit-content;
+}
+
+.difficulty-Easy {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.difficulty-Moderate {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.difficulty-Hard {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.fav-btn {
+    margin-top: auto;
+    padding: 0.5rem;
+    background-color: var(--primary);
+    color: var(--light-text);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.fav-btn:hover {
+    background-color: var(--primary-hover);
+}
+
+/* Filtering Section */
+.page-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.filter-controls {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--primary);
+    background-color: var(--card-bg);
+    color: var(--primary);
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.filter-btn.active-filter,
+.filter-btn:hover {
+    background-color: var(--primary);
+    color: var(--light-text);
+}
+
+/* Form Styling */
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow);
+}
+
+.form-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.25rem;
+}
+
+label {
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.required {
+    color: #b30000;
+}
+
+input,
+select,
+textarea {
+    padding: 0.6rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid var(--focus-ring);
+}
+
+.submit-btn {
+    background-color: var(--primary);
+    color: var(--light-text);
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+}
+
+.submit-btn:hover {
+    background-color: var(--primary-hover);
+}
+
+.feedback-box {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    border-radius: 4px;
+    color: #155724;
+}
+
+.hidden {
+    display: none;
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+footer {
+    background-color: var(--primary);
+    color: var(--light-text);
+    text-align: center;
+    padding: 1.25rem;
+    margin-top: 2rem;
+    font-size: 0.95rem;
+}
+
+footer p {
+    margin: 0.25rem 0;
+}
+
+.ref-link {
+    color: var(--accent);
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   RESPONSIVE MEDIA QUERIES
+   ========================================================================== */
+@media screen and (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    nav ul {
+        width: 100%;
+        justify-content: center;
+    }
+}
