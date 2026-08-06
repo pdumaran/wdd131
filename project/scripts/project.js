@@ -151,20 +151,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Handle Form Submission Counter in LocalStorage
     if (contactForm) {
-        contactForm.addEventListener("submit", (e) => {
-            e.preventDefault();
-
+        contactForm.addEventListener("submit", () => {
             let submissionCount = Number(localStorage.getItem("formSubmissions")) || 0;
             submissionCount += 1;
             localStorage.setItem("formSubmissions", submissionCount);
-
-            const feedbackBox = document.getElementById("form-feedback");
-            const countDisplay = document.getElementById("submission-count");
-
-            if (countDisplay) countDisplay.textContent = submissionCount;
-            if (feedbackBox) feedbackBox.classList.remove("hidden");
-
-            contactForm.reset();
         });
     }
 
