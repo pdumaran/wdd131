@@ -3,7 +3,6 @@
    ========================================================================== */
 :root {
     --primary: #1b4332;
-    /* Deep Forest Green */
     --primary-hover: #2d6a4f;
     --accent: #d8f3dc;
     --dark-text: #111111;
@@ -12,7 +11,11 @@
     --card-bg: #ffffff;
     --border-color: #cccccc;
     --focus-ring: #0056b3;
-    --shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    --shadow: rgba(0, 0, 0, 0.08) 0px 4px 10px;
+    --error-color: #b30000;
+    --success-bg: #d4edda;
+    --success-border: #c3e6cb;
+    --success-text: #155724;
 }
 
 * {
@@ -102,16 +105,6 @@ main {
     margin-bottom: 1rem;
 }
 
-/* Trail Card Image Styling */
-.trail-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    /* Prevents image distortion */
-    border-radius: 4px;
-    margin-bottom: 0.75rem;
-}
-
 .hero h1 {
     font-size: 2.2rem;
     margin-bottom: 1rem;
@@ -156,9 +149,10 @@ main {
     flex-direction: column;
 }
 
+/* Consolidated Trail Card Image Rule */
 .trail-card img {
     width: 100%;
-    height: 180px;
+    height: 200px;
     object-fit: cover;
     border-radius: 4px;
     margin-bottom: 0.75rem;
@@ -195,7 +189,7 @@ main {
 }
 
 .fav-btn {
-    margin-top: auto;
+    margin-top: 1rem;
     padding: 0.5rem;
     background-color: var(--primary);
     color: var(--light-text);
@@ -203,7 +197,6 @@ main {
     border-radius: 4px;
     cursor: pointer;
     font-weight: bold;
-    margin-top: 1rem;
 }
 
 .fav-btn:hover {
@@ -240,7 +233,9 @@ main {
     color: var(--light-text);
 }
 
-/* Form Styling */
+/* ==========================================================================
+   FORM STYLING
+   ========================================================================== */
 .form-container {
     max-width: 600px;
     margin: 0 auto;
@@ -257,13 +252,41 @@ main {
     margin-bottom: 1.25rem;
 }
 
+.fieldset-group {
+    border: 1px solid var(--border-color);
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+legend {
+    font-weight: 700;
+    padding: 0 0.4rem;
+}
+
+.radio-group,
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.radio-group label,
+.checkbox-group label {
+    font-weight: normal;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
 label {
     font-weight: 700;
     margin-bottom: 0.25rem;
 }
 
 .required {
-    color: #b30000;
+    color: var(--error-color);
 }
 
 input,
@@ -287,6 +310,7 @@ textarea:focus {
     font-weight: 700;
     cursor: pointer;
     border: none;
+    padding: 0.75rem;
 }
 
 .submit-btn:hover {
@@ -296,10 +320,10 @@ textarea:focus {
 .feedback-box {
     margin-top: 1.5rem;
     padding: 1rem;
-    background-color: #d4edda;
-    border: 1px solid #c3e6cb;
+    background-color: var(--success-bg);
+    border: 1px solid var(--success-border);
     border-radius: 4px;
-    color: #155724;
+    color: var(--success-text);
 }
 
 .hidden {
